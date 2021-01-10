@@ -1,0 +1,36 @@
+@import '../../../App.scss';
+
+.input {
+  height: 3rem;
+  width: 30rem;
+  font-family: $font-primary;
+  margin: 1.5rem 0rem 0rem 3rem;
+  &:focus {
+    outline-color: $color-secondary;
+  }
+}
+.payment-button {
+  cursor: pointer;
+  margin-left: 3rem;
+  height: 3rem;
+  width: 15rem;
+  font-family: $font-primary;
+  color: #ffffff;
+  border: none;
+  background-color: #000;
+
+  &:hover {
+    background-color: #db0001;
+  }
+
+  @media only screen and (max-width: $bp-750) {
+    margin-top: 2rem;
+  }
+}
+
+.tiknof-cont {
+  @media only screen and (max-width: $bp-750) {
+    display: flex;
+    flex-direction: column;
+  }
+}

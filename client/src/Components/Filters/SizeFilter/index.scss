@@ -1,0 +1,41 @@
+@import '../../../App.scss';
+
+.filters-list {
+  list-style: none;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  &__item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.filter-label {
+  padding: 0.1rem 0.5rem;
+
+  &__text {
+    font-size: 1.1rem;
+  }
+}
+
+.filter-label:hover {
+  cursor: pointer;
+}
+
+.filter-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  &:checked ~ .filter-label {
+    color: $color-white;
+    background-color: $color-secondary;
+  }
+}
+
+.size-filter {
+  @media only screen and (max-width: $bp-470) {
+    display: none;
+  }
+}

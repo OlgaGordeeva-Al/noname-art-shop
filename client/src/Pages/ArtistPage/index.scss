@@ -1,0 +1,17 @@
+.oneArtistItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.oneArtistItems-pic {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.artist-page {
+  min-height: 100vh;
+}

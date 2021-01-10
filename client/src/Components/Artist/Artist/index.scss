@@ -1,0 +1,15 @@
+@import '../../../App.scss';
+
+.artist-area {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 5rem 10rem;
+}
+
+.artist-area__item {
+  background-color: $color-secondary;
+  color: $color-white;
+  padding: 0.3rem 0.5rem;
+}

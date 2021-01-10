@@ -1,0 +1,59 @@
+@import '../../App.scss';
+
+.closeIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $color-primary;
+    padding: 0.3rem;
+  }
+  &__icon:hover {
+    cursor: pointer;
+    background-color: $color-secondary;
+    transition: all 0.2s;
+    fill: $color-white;
+  }
+}
+
+.authNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3rem;
+
+  &__title {
+    font-size: 2rem;
+
+    @media only screen and (max-width: $bp-750) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.auth-label {
+  padding: 0.1rem 0.5rem;
+}
+
+.auth-label:not(:last-child) {
+  @media only screen and (max-width: $bp-750) {
+    margin-right: 1rem;
+  }
+}
+
+.auth-label:hover {
+  cursor: pointer;
+}
+
+.auth-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  &:checked ~ .auth-label {
+    color: $color-white;
+    background-color: $color-secondary;
+  }
+}

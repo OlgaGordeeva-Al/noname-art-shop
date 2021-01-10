@@ -1,0 +1,151 @@
+@import '../../../App.scss';
+
+.header-main-reverse {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+  border-bottom: var(--line);
+  position: relative;
+
+  @media only screen and (max-width: $bp-large) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+  border-bottom: var(--line);
+
+  &__logo {
+    @media only screen and (max-width: $bp-750) {
+      line-height: 0.5rem;
+    }
+  }
+
+  &__logo-reverse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media only screen and (max-width: $bp-large) {
+      position: static;
+      transform: none;
+    }
+
+    @media only screen and (max-width: $bp-750) {
+      line-height: 0.5rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-750) {
+    flex-direction: column;
+  }
+
+  &__user-nav {
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+
+    @media only screen and (max-width: $bp-large) {
+      align-self: center;
+      margin-left: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-750) {
+      margin-bottom: 1rem;
+      margin-left: 2rem;
+      width: 100%;
+      justify-content: center;
+    }
+
+    &--el {
+      padding: 0.3rem 0.5rem;
+
+      &:hover {
+        cursor: pointer;
+        color: #fff;
+        background-color: $color-secondary;
+        transition: all 0.1s;
+      }
+      &:hover .user-nav__icon {
+        fill: $color-white;
+        transition: all 0.2s;
+      }
+
+      &:hover .fav-count {
+        color: $color-white;
+        transition: all 0.2s;
+      }
+
+      @media only screen and (max-width: $bp-750) {
+        padding: 0 1rem;
+      }
+    }
+
+    &--el {
+      margin-right: 2rem;
+
+      &:first-child {
+        margin-top: 0.4rem;
+      }
+    }
+  }
+}
+
+.user-nav__icon {
+  width: 2rem;
+  height: 2rem;
+  fill: $color-primary;
+}
+
+.main-logo-reverse {
+  width: 24.2rem;
+  height: 4.6rem;
+
+  @media only screen and (max-width: $bp-large) {
+    width: 20.8rem;
+    height: 4rem;
+  }
+}
+
+.main-logo {
+  max-width: 100%;
+}
+
+.user-name {
+  margin-top: 0.7rem;
+  margin-left: -2rem;
+  margin-right: 2rem;
+  padding: 0.3rem 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.fav-count {
+  margin-top: 1rem;
+  margin-left: -1.9rem;
+  margin-right: 2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.disable-count {
+  visibility: hidden;
+}

@@ -1,0 +1,33 @@
+@import '../../App.scss';
+
+.cabinet {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  padding: 3rem 4rem;
+
+  @media only screen and (max-width: $bp-750) {
+    padding: 3rem 0;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.orders {
+  padding: 2rem;
+}
+
+.personal-info {
+  &__list {
+    list-style: none;
+    padding: 2rem;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+  }
+
+  &__item:last-child {
+    margin-top: 2rem;
+  }
+}

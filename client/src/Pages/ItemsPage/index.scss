@@ -1,0 +1,15 @@
+@import '../../App.scss';
+
+.main-items {
+  display: grid;
+  grid-template-columns: 20% 80%;
+
+  @media only screen and (max-width: $bp-large) {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
+
+.filters-title {
+  font-weight: 300;
+}

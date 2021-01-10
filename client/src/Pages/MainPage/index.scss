@@ -1,0 +1,15 @@
+@import '../../App.scss';
+
+.main {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.main-reverse {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.filters-title {
+  font-weight: 300;
+}

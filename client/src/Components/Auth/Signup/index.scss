@@ -1,0 +1,38 @@
+@import "../../../App.scss";
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__allertText {
+    font-size: 2rem;
+    color: $color-secondary;
+  }
+  &__inputArea {
+    margin-top: 1rem;
+  }
+  &__inputText {
+    height: 3rem;
+    width: 30rem;
+    font-family: $font-primary;
+    &:focus {
+      outline-color: $color-secondary;
+    }
+  }
+  &__signUpButton {
+    background-color: $color-secondary;
+    border: none;
+    color: $color-white;
+    font-family: $font-primary;
+    width: 20rem;
+    height: 4rem;
+    margin-top: 1.5rem;
+    &:hover {
+      cursor: pointer;
+      background-color: #db0001;
+    }
+  }
+  &__attentionList {
+    margin-top: 1.5rem;
+  }
+}

@@ -1,0 +1,86 @@
+@import '../../App.scss';
+
+.order-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 5rem 20rem;
+  width: 100%;
+
+  @media only screen and (max-height: 24em) {
+    padding: 2rem 20rem;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 5rem 5rem;
+  }
+
+  @media only screen and (max-width: $bp-750) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__art-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-750) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-text {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.size-text {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: var(--line);
+
+  @media only screen and (max-width: $bp-750) {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.price-text {
+  margin-bottom: 3rem;
+
+  @media only screen and (max-width: $bp-750) {
+    margin-bottom: 1rem;
+  }
+}
+
+.btn-buy {
+  padding: 0.9rem 3rem;
+  background-color: $color-secondary;
+  color: $color-white;
+  text-decoration: none;
+  text-transform: lowercase;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #dd0000;
+  }
+}
+
+.more-products-list {
+  margin: 5rem 0;
+  display: flex;
+  height: 40rem;
+  overflow: scroll;
+  grid-column: 1 / 3;
+
+  @media only screen and (max-width: $bp-750) {
+    display: none;
+  }
+}

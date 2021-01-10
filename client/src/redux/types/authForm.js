@@ -1,0 +1,2 @@
+export const SHOW_AUTH_FORM = 'SHOW_AUTH_FORM';
+export const CLOSE_AUTH_FORM = 'CLOSE_AUTH_FORM'

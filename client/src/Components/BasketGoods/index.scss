@@ -1,0 +1,291 @@
+@import '../../App.scss';
+
+.basket-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-primary;
+  height: 100vh;
+
+  &__counter-goods {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90rem;
+    height: 3rem;
+    border: 1px dotted #a5a5a5;
+    padding-top: 3px;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 70rem;
+    }
+
+    @media only screen and (max-width: $bp-570) {
+      flex-direction: column;
+      border: none;
+    }
+
+    @media only screen and (max-width: $bp-570) {
+      width: 60rem;
+    }
+
+    &__text {
+      margin-left: 2rem;
+    }
+  }
+  &__goods-area {
+    overflow: scroll;
+    width: 90rem;
+    max-height: 30rem;
+    border: 1px dotted #a5a5a5;
+    border-bottom: none;
+    border-top: none;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 70rem;
+    }
+
+    @media only screen and (max-width: $bp-570) {
+      border: none;
+
+      width: 60rem;
+    }
+  }
+  &__total-price-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90rem;
+    border: 1px dotted #a5a5a5;
+    border-top: none;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 70rem;
+    }
+
+    @media only screen and (max-width: $bp-570) {
+      border: none;
+      margin-right: 4rem;
+    }
+  }
+
+  &__buttons-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 90rem;
+    min-height: 5rem;
+    border: 1px dotted #a5a5a5;
+    border-top: none;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 70rem;
+    }
+
+    @media only screen and (max-width: $bp-570) {
+      border: none;
+      flex-direction: column;
+      width: 60rem;
+    }
+  }
+}
+.basket-container-navigation {
+  display: flex;
+
+  @media only screen and (max-width: $bp-570) {
+    flex-direction: column;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 30rem;
+    color: #a5a5a5;
+    border: 1px dotted #a5a5a5;
+    border-bottom: none;
+    border-left: none;
+    @media only screen and (max-width: $bp-largest) {
+      width: 23.333333333333rem;
+    }
+
+    @media only screen and (max-width: $bp-570) {
+      border: none;
+      width: 20rem;
+    }
+
+    &--choose {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 4rem;
+      width: 30rem;
+      background-color: #636363;
+      color: #ffffff;
+      border: 1px dotted #a5a5a5;
+      @media only screen and (max-width: $bp-largest) {
+        width: 23.33333333rem;
+      }
+
+      @media only screen and (max-width: $bp-570) {
+        border: none;
+        width: 20rem;
+      }
+    }
+  }
+}
+.basket-container-good-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90rem;
+  height: 7rem;
+  border: 1px dotted #a5a5a5;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 70rem;
+  }
+
+  @media only screen and (max-width: $bp-570) {
+    width: 60rem;
+    border: none;
+    margin-bottom: 2rem;
+  }
+
+  &__image-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: 7rem;
+  }
+  .image {
+    width: 6rem;
+    height: 6rem;
+
+    @media only screen and (max-width: $bp-570) {
+      display: none;
+    }
+  }
+  .remove-button {
+    cursor: pointer;
+    font-family: $font-primary;
+    color: #ffffff;
+    border: none;
+    background-color: black;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    margin-left: 5rem;
+    &:hover {
+      background-color: $color-secondary;
+    }
+    @media only screen and (max-width: $bp-570) {
+      margin-left: 1rem;
+    }
+  }
+  &__info-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40rem;
+    margin-left: 3rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 20rem;
+    }
+  }
+  &__price-area {
+    margin-left: 8rem;
+    font-weight: bold;
+
+    @media only screen and (max-width: $bp-largest) {
+      margin-left: 8rem;
+    }
+
+    @media only screen and (max-width: $bp-650) {
+      margin-left: 4rem;
+    }
+
+    @media only screen and (max-width: $bp-570) {
+      margin-left: 1rem;
+    }
+  }
+}
+.total-price {
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  border: 1px dotted #a5a5a5;
+  font-weight: bold;
+  border-right: none;
+  border-bottom: none;
+  display: flex;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+
+  @media only screen and (max-width: $bp-570) {
+    border: none;
+    margin-right: 20rem;
+  }
+}
+
+.checkout-button {
+  cursor: pointer;
+  margin-right: 1rem;
+  height: 4rem;
+  width: 25rem;
+  font-family: $font-primary;
+  color: #ffffff;
+  border: none;
+  background-color: $color-secondary;
+  &:hover {
+    background-color: #db0001;
+  }
+
+  @media only screen and (max-width: $bp-570) {
+    width: 20rem;
+    margin-top: 1rem;
+  }
+}
+
+.keep-shopping-button {
+  cursor: pointer;
+  margin-right: 1rem;
+  height: 4rem;
+  width: 20rem;
+  font-family: $font-primary;
+  color: #ffffff;
+  border: none;
+  background-color: #000;
+
+  &:hover {
+    background-color: #40393a;
+  }
+
+  @media only screen and (max-width: $bp-570) {
+    width: 20rem;
+    margin-top: 1rem;
+  }
+}
+
+.no-items-cart {
+  height: 100vh;
+  width: 100%;
+  padding: 5rem;
+  margin-top: 17rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}

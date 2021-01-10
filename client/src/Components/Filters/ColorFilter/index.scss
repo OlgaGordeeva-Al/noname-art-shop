@@ -1,0 +1,77 @@
+@import '../../../App.scss';
+
+.mb-util {
+  margin-bottom: 1rem;
+}
+
+.filters-list__colors {
+  list-style: none;
+  margin-bottom: 2rem;
+  width: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters-list__item-colors {
+  margin-bottom: 2px;
+  margin-right: 2px;
+  padding: 0.5rem 0.6rem;
+}
+
+.filter-label-colors {
+  padding: 0.3rem 1rem;
+  border: 0.5px solid white;
+
+  &--light-blue {
+    background-color: lightblue;
+  }
+  &--yellow {
+    background-color: yellow;
+  }
+  &--green {
+    background-color: green;
+  }
+  &--orange {
+    background-color: orange;
+  }
+  &--purple {
+    background-color: purple;
+  }
+  &--red {
+    background-color: red;
+  }
+  &--beige {
+    background-color: beige;
+  }
+  &--pink {
+    background-color: pink;
+  }
+  &--grey {
+    background-color: grey;
+  }
+  &--blue {
+    background-color: blue;
+  }
+  &--whiteblack {
+    background: linear-gradient(
+      to right bottom,
+      rgb(255, 255, 255) 0% /*bottom-right color*/,
+      rgba(190, 190, 190, 0.5) 50% /*middle color*/,
+      rgb(0, 0, 0) 51% /*top-left color*/
+    );
+  }
+}
+
+.filter-label-colors:hover {
+  cursor: pointer;
+}
+
+.filter-checkbox-colors {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  &:checked ~ .filter-label-colors {
+    border: 0.5px solid black;
+  }
+}

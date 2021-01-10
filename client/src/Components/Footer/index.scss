@@ -1,0 +1,12 @@
+@import '../../App.scss';
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-top: var(--line);
+
+  &__copyright {
+  }
+}

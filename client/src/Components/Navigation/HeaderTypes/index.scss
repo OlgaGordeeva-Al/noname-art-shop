@@ -1,0 +1,134 @@
+@import '../../../App.scss';
+
+.header-types {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: $bp-largest) {
+    flex-wrap: wrap;
+    width: 70rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    width: 57rem;
+  }
+
+  @media only screen and (max-width: $bp-440) {
+    width: 35rem;
+  }
+
+  &:hover {
+    color: $color-white;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+
+    margin-right: 2.7rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      margin-right: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    &:hover .types-link {
+      &:link,
+      &:visited,
+      &:active {
+        color: $color-white;
+        transition: all 0.2s;
+      }
+      color: $color-white;
+      transition: all 0.2s;
+    }
+  }
+
+  &__item:hover {
+    cursor: pointer;
+    background-color: $color-secondary;
+    color: $color-white;
+    transition: all 0.2s;
+  }
+}
+
+.header-types__item--artists {
+  padding: 0.1rem 1.5rem;
+  border-right: var(--line);
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-secondary;
+    color: $color-white;
+    transition: all 0.2s;
+  }
+
+  &:hover .types-link {
+    color: $color-white;
+    transition: all 0.2s;
+  }
+}
+
+.types-link {
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-primary;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $color-white;
+  }
+}
+
+.selected {
+  &:link,
+  &:visited,
+  &:active {
+    display: inline-block;
+    background-color: $color-secondary;
+    color: $color-white;
+    text-decoration: none;
+  }
+}
+
+.header-types__li {
+  display: inline;
+  @media only screen and (max-width: $bp-750) {
+    display: none;
+  }
+}
+
+.show-types-menu {
+  display: none;
+}
+
+.show-types-label {
+  display: none;
+
+  @media only screen and (max-width: $bp-750) {
+    display: block;
+  }
+}
+
+.show-types-menu:checked ~ .header-types__li {
+  display: block;
+}
+
+.show-types-menu:checked ~ .show-types-label {
+  display: block;
+  position: fixed;
+  top: 2.5%;
+  right: 4%;
+  z-index: 777;
+}
+
+.menu2 {
+  width: 3rem;
+  height: 4rem;
+}

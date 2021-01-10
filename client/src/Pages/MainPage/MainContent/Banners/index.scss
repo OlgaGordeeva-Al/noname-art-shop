@@ -1,0 +1,49 @@
+@import '../../../../App.scss';
+
+.banners-container {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+
+  @media only screen and (max-width: $bp-900) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.banner {
+  padding: 0 5.5rem;
+  object-fit: cover;
+  width: 95%;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  @media only screen and (max-width: $bp-1400) {
+    padding: 0 4.5rem;
+  }
+
+  @media only screen and (max-width: $bp-900) {
+    padding: 0 3.5rem;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: $bp-540) {
+    padding: 1rem 1.5rem;
+    width: 48rem;
+    height: 35rem;
+  }
+
+  @media only screen and (max-width: $bp-440) {
+    padding: 1rem 1rem;
+    width: 38rem;
+    height: 25rem;
+  }
+}
