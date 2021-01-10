@@ -2,7 +2,7 @@
 
 Коммерческий проект интернет-магазина  "Alibabart" работ малоизвестных художников.
 Функционал сайта можно оценить перейдя по ссылке https://alibabart.herokuapp.com/.
-Проект выполнен с использованием React, Redux, Thunk, Express, Scss
+Проект выполнен с использованием React, Redux, Thunk, Express, MongoDB Atlas, Scss
 
 # Описание 
 ![](README.gif)
